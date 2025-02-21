@@ -19,6 +19,8 @@ COPY . .
 # Run database migrations
 RUN python manage.py migrate
 
+RUN python manage.py createsuperuser
+
 RUN python manage.py runserver
 
 # Expose the application port
